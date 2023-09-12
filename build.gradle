@@ -18,6 +18,10 @@ configurations {
 	}
 }
 
+war {
+	archiveFileName = 'ttbProject.war'
+}
+
 repositories {
 	mavenCentral()
 }
