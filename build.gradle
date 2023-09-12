@@ -18,8 +18,15 @@ configurations {
 	}
 }
 
-war {
-	archiveFileName = 'ttbProject.war'
+bootWar {
+    enabled = true
+    archiveFileName = 'ttbProject.war'
+    // 실행 가능한 WAR 파일을 생성하지 않도록 설정
+    bootInf {
+        into('BOOT-INF/lib') {
+            from configurations.runtimeClasspath
+        }
+    }
 }
 
 repositories {
